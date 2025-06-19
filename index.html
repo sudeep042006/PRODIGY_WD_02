@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Navigation Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <h1 class="logo">AROTECH</h1>
+    <ul class="nav-list" id="navList">
+    <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
+    <li><a href="#" onclick="loadPage('vision.html')">About Our Vision</a></li>
+    <li><a href="#" onclick="loadPage('Ourtech.html')">Our Technology</a></li>
+    <li><a href="#" onclick="loadPage('biotech.html')">AI in Biotech</a></li>
+    <li><a href="#" onclick="loadPage('sde.html')">Smart Devices & Electronics</a></li>
+    <li><a href="#" onclick="loadPage('br.html')">Biotech Resources</a></li>
+    <li><a href="#" onclick="loadPage('cu.html')">Contact Us</a></li>
+    <li><a href="#" onclick="openLogin()">Login</a></li>
+    </ul>
+  </nav>
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" /><br /><br />
+      <input type="password" placeholder="Password" /><br /><br />
+      <a id="fp" href="#">Forgot Password?</a>
+      <div id="button"><button>Login</button></div>
+      <div class="social-icons">
+        <img src="facebook-logo_1080029-107.jpg" width="30px" />
+        <img src="Google_G_logo.svg.png" width="30px" />
+        <img src="images.png" width="30px" />
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="content">
+    <p id="para"> </p>
+
+    <div id="footer">
+      <div><H4>PRODIGY_WD_02</H4></div>
+      <div><H5>© 2025 Sudeep Kuralkar.</H5></div>
+      <div><H5>Created on June 18, 2025.</H5></div>
+      <div><H5> All rights reserved.</H5></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>

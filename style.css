@@ -1,0 +1,241 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(15, 6, 48);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  height: 5px;
+  background-color: #0c0431;
+  border-color: white;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+  border: 3px solid white;
+
+}
+
+
+.logo {
+  color: white;
+  font-size: 24px;
+  padding-top: 6px;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-top: 6px;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+  padding: 4px 8px;
+  margin-top: 2px;
+  border-radius: 8px;
+  outline-color: white;
+  display: inline-block;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-list a:hover {
+  transform: scale(1.08);
+  font-weight: bold;
+  background-color: rgba(10, 223, 246, 0.2);
+  color: rgb(10, 223, 246);
+}
+
+
+.navbar.scrolled {
+  background-color: rgb(107, 138, 231);
+   transition: all 0.3s ease;
+  border: 3px solid black; 
+}
+.navbar.scrolled .nav-list a:hover {
+  background-color: rgba(0, 32, 96, 0.2); 
+  color: rgb(0, 32, 96);
+}
+
+
+.content {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Footer */
+#footer {
+  font-size: 12px;
+  text-align: center;
+  background-color: #e0f7fa;
+  color: #333;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: 10px;
+  
+  border: 3px solid rgb(4, 4, 58);
+}
+
+#para {
+  background: linear-gradient(to right, #135a7b, #a3eeff);
+  color: rgb(250, 247, 255);
+  padding: 20px;
+  min-height: 300px;
+  width: 100%;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    margin-left:auto;
+    background-color: #0c0431;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal a{
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: x-small;
+}
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  animation: zoomIn 0.3s ease;
+  text-align: center; 
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#login {
+    font-weight: bolder;
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0098d4;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #02252a, #067dde);
+  color: white;
+  font-weight: bold;
+  border: 2px solid #2196f3;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+  letter-spacing: 0.5px;
+  transform: scale(1.01);
+}
+
+#fp {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  color: rgb(6, 33, 82);
+  cursor: pointer;
+  font-weight: bold  ;
+  font-size: 12px;
+
+}
+
+
+#fp a:hover{
+  transform: scale(1.01);
+  font-size: 13px;
+color: darkblue;
+}
